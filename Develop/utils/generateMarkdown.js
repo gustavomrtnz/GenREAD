@@ -1,41 +1,32 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
+function renderLicenseBadge(license) { // If there is no license, return an empty string
   if (!license) {
     return '';
   }
-
-  // Example: If the license is "MIT", return the Markdown for a MIT license badge
-  // Replace "MIT" with the actual license name.
-  return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+  return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`; // Replace "MIT License" with the actual license name.
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
+function renderLicenseLink(license) { // If there is no license, return an empty string
   if (!license) {
     return '';
   }
-
-  // Example: If the license is "MIT", return the URL for the MIT license
-  // Replace "MIT" with the actual license name.
-  return `[MIT License](https://opensource.org/licenses/MIT)`;
+  return `[MIT License](https://opensource.org/licenses/MIT)`; // Replace "MIT License" with the actual license link.
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
+function renderLicenseSection(license) { // If there is no license, return an empty string
   if (!license) {
     return '';
   }
-
-  // Example: If the license is "MIT", return the Markdown for the MIT license section
-  // Replace "MIT" with the actual license name.
-  return `## License`;
+  return `## License`; // Replace "License" with the actual license name.
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(data) { // Generate markdown for README based on the data object
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
   ${renderLicenseLink(data.license)}
