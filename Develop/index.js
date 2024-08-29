@@ -6,16 +6,16 @@ const generateMarkdown = require('./utils/generateMarkdown'); // Import the gene
 
 
 // TODO: Create an array of questions for user input
-const questions = [
+const questions = [ // Array of questions for user input
     {
-      type: "input",
-      name: "title",
-      message: "Tile of your Project.",
+      type: "input", 
+      name: "title", // Question for project title
+      message: "Tile of your Project.", // Question message
     },
     {
       type: "input",
-      name: "description",
-      message: "Describe the description, installation instructions,usage information,contribution guidelines, and test instructions.",
+      name: "description", // Question for project description
+      message: "Describe the description, installation instructions,usage information,contribution guidelines, and test instructions.", 
     },
     {
       type: "input",
