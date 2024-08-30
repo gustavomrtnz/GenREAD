@@ -6,16 +6,28 @@ const generateMarkdown = require('./utils/generateMarkdown'); // Import the gene
 
 
 // TODO: Create an array of questions for user input
-const questions = [ // Array of questions for user input
+const questions = [// Array of questions for user input
     {
       type: "input", 
-      name: "title", // Question for project title
-      message: "Tile of your Project.", // Question message
+      name: "title",
+      message: "Tile of your Project.", 
     },
     {
       type: "input",
-      name: "description", // Question for project description
-      message: "Describe the description, installation instructions,usage information,contribution guidelines, and test instructions.", 
+      name: "description",
+      message: "Describe the description,usage information,contribution guidelines, and test instructions.", 
+    },
+    {
+      type: "input",
+      name: "installation",
+      message: "Instllation instructions",
+
+    },
+    {
+      type: "input",
+      name: "usage",
+      message: "enter usage information",
+
     },
     {
       type: "input",
@@ -51,7 +63,7 @@ const questions = [ // Array of questions for user input
         message: "Please provide any test instructions.",
         default: "",
     }
-  ]; // Questions array to ask user for input.
+  ] 
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { // Write the markdown data to a README.md file. 
@@ -62,12 +74,12 @@ function writeToFile(fileName, data) { // Write the markdown data to a README.md
 }
 
 // TODO: Create a function to initialize appfunction init() {
-    function init() {
-        inquirer.prompt(questions).then((responses) => {
-          console.log("Creating Professional README.md File...");
-          writeToFile("./dist/README.md", generateMarkdown({ ...responses }));
-        });
-      }
+  function init() {
+    inquirer.prompt(questions).then((responses) => {
+      console.log("Creating Professional README.md File...");
+      writeToFile("README.md", generateMarkdown({ ...responses }));
+    });
+  }
 // Function call to initialize app
 init();
 

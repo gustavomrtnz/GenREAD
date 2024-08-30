@@ -50,7 +50,7 @@ function generateMarkdown(data) { // Generate markdown for README based on the d
   ${renderLicenseSection(data.license)}
 
   ## Contributing
-  ${data.contributing}
+  ${data.contributors}
 
   ## Tests
   ${data.tests}
